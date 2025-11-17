@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/")
-class GameCatalogController {
+@RequestMapping("/catalog")
+public class GameCatalogController {
     @Autowired
     private GameCatalog gameCatalog;
 
-    @GetMapping("/catalog")
+    @GetMapping
     public Collection<String> getGameIdentifiers()
     {
         return gameCatalog.getGameIdentifiers();
