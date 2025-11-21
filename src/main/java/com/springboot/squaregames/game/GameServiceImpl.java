@@ -5,6 +5,7 @@ import com.springboot.squaregames.game.dto.GameCreationParams;
 import fr.le_campus_numerique.square_games.engine.Game;
 import fr.le_campus_numerique.square_games.engine.GameFactory;
 import fr.le_campus_numerique.square_games.engine.connectfour.ConnectFourGameFactory;
+import fr.le_campus_numerique.square_games.engine.taquin.TaquinGameFactory;
 import fr.le_campus_numerique.square_games.engine.tictactoe.TicTacToeGameFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,6 +33,9 @@ public class GameServiceImpl implements GameService {
 
         ConnectFourGameFactory connectFourFactory = new ConnectFourGameFactory();
         factories.put(connectFourFactory.getGameFactoryId(), connectFourFactory);
+
+        TaquinGameFactory taquinFactory = new TaquinGameFactory();
+        factories.put(taquinFactory.getGameFactoryId(), taquinFactory);
     }
 
     @Override
