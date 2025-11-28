@@ -1,13 +1,8 @@
 package com.springboot.squaregames.game;
 
-import com.springboot.squaregames.catalog.interfaces.GameCatalog;
 import com.springboot.squaregames.game.dto.GameCreationParams;
 import com.springboot.squaregames.game.plugins.GamePlugin;
 import fr.le_campus_numerique.square_games.engine.Game;
-import fr.le_campus_numerique.square_games.engine.GameFactory;
-import fr.le_campus_numerique.square_games.engine.connectfour.ConnectFourGameFactory;
-import fr.le_campus_numerique.square_games.engine.taquin.TaquinGameFactory;
-import fr.le_campus_numerique.square_games.engine.tictactoe.TicTacToeGameFactory;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
